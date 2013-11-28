@@ -1,0 +1,31 @@
+Description: <short summary of the patch>
+ .first try on this
+ cpyrit-cuda (0.4.0-2) unstable; urgency=low
+ .
+   * firsttry
+Author: Christian Kastner <debian@kvr.at>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- cpyrit-cuda-0.4.0.orig/setup.py
++++ cpyrit-cuda-0.4.0/setup.py
+@@ -32,7 +32,7 @@ VERSION = '0.4.0'
+ 
+ NVIDIA_INC_DIRS = []
+ NVCC = 'nvcc'
+-for path in ('/usr/local/cuda', '/opt/cuda'):
++for path in ('/usr/lib/nvidia-cuda-toolkit/', '/usr/'):
+     if os.path.exists(path):
+         NVIDIA_INC_DIRS.append(os.path.join(path, 'include'))
+         NVCC = os.path.join(path, 'bin', 'nvcc')

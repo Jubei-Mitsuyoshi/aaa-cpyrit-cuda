@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+PYVERS = $(shell pyversions -r -v)
+
+
+
+
+%:
+	dh $@ --with python2 
+
+#override_dh_auto_configure:
+#	dh_auto_configure
+#	sed -e 's,<CORES>,$(NUMCORES),' debian/config.build.in > debian/config.build
+
+override_dh_auto_test:
+
+#ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
+#	set -e ;\
+#	for py in $(PYVERS); do \
+#		LIB=$$(ls -d $(CURDIR)/build/lib.*-$$py) ;\
+#		cd test ;\
+#		PYRIT_CONFIG_FILE=../debian/config.build PYTHONPATH=$$LIB \
+#			python$$py test_pyrit.py ;\
+#		cd .. ;\
+#	done
+#endif
+
+#override_dh_auto_clean:
+#	dh_auto_clean
+#	rm -f debian/config.build
+

@@ -1,0 +1,7 @@
+cpyrit-cuda (0.4.0-git20131223) unstable; urgency=low
+
+  * first packaging for debian
+  * patch to change default locations for nvcc
+  * in setup.py
+
+ -- Jubei Mitsuyoshi <jubei.house.of.five.masters@gmail.com>  Sat, 23 Nov 2013 20:32:00 +0100
