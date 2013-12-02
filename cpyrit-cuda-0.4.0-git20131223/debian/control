@@ -28,7 +28,6 @@ Recommends:
     python-sqlalchemy (>= 0.5.6)
 Suggests:
     python-psycopg2 | python-pymssql | python-mysqldb
-Description: This package adds support for nvidia-cuda gpu acceleration
-to the pyrit-*aaa package.
-.
-Note it is the git version
+Description: This package adds support for nvidia-cuda gpu acceleration to the existing *aaa pyrit packages.
+
+
